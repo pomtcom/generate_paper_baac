@@ -128,7 +128,8 @@ func readRecord() ([]record, error) {
 			} else if orderOfCell == 5 {
 				tempRecord.quantity, err = strconv.Atoi(colCell)
 				if err != nil {
-					fmt.Println(colCell, " is not a number please check")
+					fmt.Println("row number ", rowNumber, " is not valid row -> skip this row")
+					break
 				}
 			}
 			//fmt.Print(colCell, "\t")
